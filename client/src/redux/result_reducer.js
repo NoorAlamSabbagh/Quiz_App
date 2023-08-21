@@ -2,15 +2,15 @@ import { createSlice } from "@reduxjs/toolkit"
 
 export const resultReducer = createSlice({
     name: 'result',
-    initialState: {
-        userId: null,
-        result: []
+    initialState : {
+        userId : null,
+        result : []
     },
-    reducers: {
-        setUserId: (state,action)=>{
-            state.userId=action.payload;
+    reducers : {
+        setUserId : (state, action) => {
+            state.userId = action.payload
         },
-        pushResultAction: (state, action)=>{
+        pushResultAction : (state, action) => {
             state.result.push(action.payload)
         },
         updateResultAction : (state, action) => {
@@ -26,5 +26,6 @@ export const resultReducer = createSlice({
     }
 })
 
-export const {setUserId, pushResultAction, updateResultAction, resetResultAction} = resultReducer.actions;
+export const { setUserId, pushResultAction, resetResultAction, updateResultAction } = resultReducer.actions;
+
 export default resultReducer.reducer;
